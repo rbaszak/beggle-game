@@ -1,2 +1,2 @@
-# beggle-game
-Peggle clone with a few designed levels
+# Beggle
+Peggle (PopCap Games) clone with a few designed levels.

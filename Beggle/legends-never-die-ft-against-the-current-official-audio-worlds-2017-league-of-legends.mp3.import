@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/legends-never-die-ft-against-the-current-official-audio-worlds-2017-league-of-legends.mp3-029c32adeb6028d31a472207c60ad744.mp3str"
+
+[deps]
+
+source_file="res://legends-never-die-ft-against-the-current-official-audio-worlds-2017-league-of-legends.mp3"
+dest_files=[ "res://.import/legends-never-die-ft-against-the-current-official-audio-worlds-2017-league-of-legends.mp3-029c32adeb6028d31a472207c60ad744.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

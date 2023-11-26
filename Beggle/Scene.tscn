@@ -1,0 +1,319 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Peg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://shoot-shoot.png" type="Texture" id=2]
+[ext_resource path="res://Source.gd" type="Script" id=3]
+[ext_resource path="res://Scene.gd" type="Script" id=4]
+[ext_resource path="res://FontData.tres" type="Theme" id=5]
+[ext_resource path="res://end.ogg" type="AudioStream" id=6]
+[ext_resource path="res://marianMariana.png" type="Texture" id=7]
+[ext_resource path="res://FinishPolygon.gd" type="Script" id=8]
+[ext_resource path="res://MarcinModeButton.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 246.5, 10 )
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
+polygon = PoolVector2Array( 741, -11, 746, 610, 1187, 612, 1176, -3 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Walls/StaticBody2D"]
+position = Vector2( 1245, 6 )
+scale = Vector2( 1.21918, 1 )
+color = Color( 0, 0.0745098, 0.160784, 1 )
+polygon = PoolVector2Array( -414.066, -17, -409.567, 605, -43, 606, -22, -13 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D2"]
+position = Vector2( 13, 11 )
+polygon = PoolVector2Array( -20, -25, -45, 587, 267, 592, 267, -23 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/StaticBody2D2"]
+color = Color( 0, 0.0745098, 0.160784, 1 )
+polygon = PoolVector2Array( 280, -12, 280, 603, -43, 606, -22, -13 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+position = Vector2( 781, -272 )
+rotation = 1.57079
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D3"]
+position = Vector2( 13, 11 )
+polygon = PoolVector2Array( -20, -25, -45, 587, 267, 592, 267, -23 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/StaticBody2D3"]
+color = Color( 0, 0.0745098, 0.160784, 1 )
+polygon = PoolVector2Array( 280, -12, 280, 603, -43, 606, -22, -13 )
+
+[node name="Source" type="Node2D" parent="."]
+position = Vector2( 507, 42 )
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Source"]
+stream = ExtResource( 6 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Source"]
+position = Vector2( -507, -42 )
+color = Color( 0.188235, 0.176471, 0.176471, 1 )
+polygon = PoolVector2Array( 462, 77, 490, 84, 516, 74, 527, 60, 531, 35, 517, 10, 493, 0, 467, 8, 462, 11 )
+
+[node name="Sprite" type="Sprite" parent="Source"]
+rotation = -1.57079
+scale = Vector2( 0.695436, 0.695436 )
+texture = ExtResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="Source"]
+position = Vector2( 45, 0 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 101.0
+margin_top = 11.0
+margin_right = 238.0
+margin_bottom = 72.0
+theme = ExtResource( 5 )
+text = "Balls: "
+align = 1
+
+[node name="Sink" type="Area2D" parent="."]
+position = Vector2( 252, 617 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sink"]
+position = Vector2( 256.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Peg" parent="." instance=ExtResource( 1 )]
+position = Vector2( 301, 195 )
+
+[node name="Peg2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 348, 227 )
+
+[node name="Peg4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 370, 242 )
+
+[node name="Peg5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 395, 259 )
+
+[node name="Peg6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 419, 274 )
+
+[node name="Peg7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 441, 290 )
+
+[node name="Peg8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 296, 319 )
+
+[node name="Peg9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 315, 334 )
+
+[node name="Peg10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 335, 347 )
+
+[node name="Peg11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 356, 362 )
+
+[node name="Peg12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 377, 375 )
+
+[node name="Peg13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 397, 387 )
+
+[node name="Peg14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 420, 403 )
+
+[node name="Peg15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 445, 418 )
+
+[node name="Peg16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 429, 543 )
+
+[node name="Peg17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 444, 529 )
+
+[node name="Peg18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 458, 516 )
+
+[node name="Peg19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 472, 503 )
+
+[node name="Peg20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 485, 491 )
+
+[node name="Peg21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 499, 479 )
+
+[node name="Peg22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 515, 492 )
+
+[node name="Peg23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 530, 505 )
+
+[node name="Peg24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, 518 )
+
+[node name="Peg25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 557, 532 )
+
+[node name="Peg26" parent="." instance=ExtResource( 1 )]
+position = Vector2( 570, 547 )
+
+[node name="Peg3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 325, 212 )
+
+[node name="Peg27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 583, 195 )
+
+[node name="Peg28" parent="." instance=ExtResource( 1 )]
+position = Vector2( 630, 227 )
+
+[node name="Peg29" parent="." instance=ExtResource( 1 )]
+position = Vector2( 652, 242 )
+
+[node name="Peg30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 677, 259 )
+
+[node name="Peg31" parent="." instance=ExtResource( 1 )]
+position = Vector2( 701, 274 )
+
+[node name="Peg32" parent="." instance=ExtResource( 1 )]
+position = Vector2( 723, 290 )
+
+[node name="Peg33" parent="." instance=ExtResource( 1 )]
+position = Vector2( 578, 319 )
+
+[node name="Peg34" parent="." instance=ExtResource( 1 )]
+position = Vector2( 597, 334 )
+
+[node name="Peg35" parent="." instance=ExtResource( 1 )]
+position = Vector2( 617, 347 )
+
+[node name="Peg36" parent="." instance=ExtResource( 1 )]
+position = Vector2( 638, 362 )
+
+[node name="Peg37" parent="." instance=ExtResource( 1 )]
+position = Vector2( 659, 375 )
+
+[node name="Peg38" parent="." instance=ExtResource( 1 )]
+position = Vector2( 679, 387 )
+
+[node name="Peg39" parent="." instance=ExtResource( 1 )]
+position = Vector2( 702, 403 )
+
+[node name="Peg40" parent="." instance=ExtResource( 1 )]
+position = Vector2( 727, 418 )
+
+[node name="Peg41" parent="." instance=ExtResource( 1 )]
+position = Vector2( 607, 212 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 125.0
+margin_top = 528.0
+margin_right = 271.0
+margin_bottom = 595.0
+theme = ExtResource( 5 )
+text = "Reset"
+
+[node name="PointLabel" type="Label" parent="."]
+margin_left = 786.0
+margin_top = 16.0
+margin_right = 949.0
+margin_bottom = 77.0
+theme = ExtResource( 5 )
+text = "Score:
+"
+
+[node name="Marian" type="Sprite" parent="."]
+visible = false
+position = Vector2( 507, 33 )
+scale = Vector2( 0.253335, 0.253335 )
+texture = ExtResource( 7 )
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 844.0
+margin_top = 540.0
+margin_right = 920.0
+margin_bottom = 609.0
+focus_mode = 0
+theme = ExtResource( 5 )
+pressed = true
+enabled_focus_mode = 0
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 813.0
+margin_top = 495.0
+margin_right = 950.0
+margin_bottom = 556.0
+theme = ExtResource( 5 )
+text = "Music"
+
+[node name="FinishPolygon" type="Polygon2D" parent="."]
+pause_mode = 2
+visible = false
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 253, 207, 253, 394, 778, 392, 778, 206 )
+script = ExtResource( 8 )
+
+[node name="Finish" type="Label" parent="FinishPolygon"]
+margin_left = 262.0
+margin_top = 212.0
+margin_right = 762.0
+margin_bottom = 273.0
+theme = ExtResource( 5 )
+text = "GOOD JOB TRYHARD"
+
+[node name="Button" type="Button" parent="FinishPolygon"]
+pause_mode = 2
+margin_left = 389.0
+margin_top = 290.0
+margin_right = 635.0
+margin_bottom = 357.0
+theme = ExtResource( 5 )
+text = "Next level"
+
+[node name="Multikill" type="Label" parent="."]
+visible = false
+margin_left = 844.0
+margin_top = 274.0
+margin_right = 906.0
+margin_bottom = 335.0
+theme = ExtResource( 5 )
+custom_colors/font_color = Color( 0.705882, 0.47451, 0.0784314, 1 )
+text = "X2"
+
+[node name="Plus1Position" type="Position2D" parent="."]
+position = Vector2( 223, 123 )
+
+[node name="MarcinModeButton" type="CheckButton" parent="."]
+margin_left = 844.0
+margin_top = 426.0
+margin_right = 920.0
+margin_bottom = 495.0
+focus_mode = 0
+enabled_focus_mode = 0
+script = ExtResource( 9 )
+
+[node name="MarcinModeLabel" type="Label" parent="."]
+margin_left = 804.0
+margin_top = 403.0
+margin_right = 1091.0
+margin_bottom = 464.0
+rect_scale = Vector2( 0.572451, 0.572451 )
+theme = ExtResource( 5 )
+text = "MarcinMode"
+
+[connection signal="focus_entered" from="Button" to="Source" method="_on_Button_focus_entered"]
+[connection signal="focus_exited" from="Button" to="Source" method="_on_Button_focus_exited"]
+[connection signal="pressed" from="Button" to="Source" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="CheckButton" to="Source" method="_on_CheckButton_mouse_entered"]
+[connection signal="mouse_exited" from="CheckButton" to="Source" method="_on_CheckButton_mouse_exited"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_CheckButton_pressed"]
+[connection signal="pressed" from="FinishPolygon/Button" to="FinishPolygon" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="MarcinModeButton" to="Source" method="_on_MarcinModeButton_mouse_entered"]
+[connection signal="mouse_exited" from="MarcinModeButton" to="Source" method="_on_MarcinModeButton_mouse_exited"]
+[connection signal="pressed" from="MarcinModeButton" to="." method="_on_MarcinModeButton_pressed"]

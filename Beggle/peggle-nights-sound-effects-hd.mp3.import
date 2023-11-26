@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/peggle-nights-sound-effects-hd.mp3-ed5805e9c03aa57aa3135bb23790652f.mp3str"
+
+[deps]
+
+source_file="res://peggle-nights-sound-effects-hd.mp3"
+dest_files=[ "res://.import/peggle-nights-sound-effects-hd.mp3-ed5805e9c03aa57aa3135bb23790652f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
