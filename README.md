@@ -2,5 +2,5 @@
 Peggle (PopCap Games) clone with a few designed levels.
 
 Screenshots:
-![Alt text](/screenshots/1beggle.jpg?raw=true)
-![Alt text](/screenshots/2beggle.jpg?raw=true)
+![Screen1](/screenshots/1beggle.png?raw=true)
+![Screen2](/screenshots/2beggle.png?raw=true)
